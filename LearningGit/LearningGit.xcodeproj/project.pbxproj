@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ED5DBD19210473F80035F596 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED5DBD18210473F80035F596 /* main.cpp */; };
+		ED5DBD2C210475E30035F596 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED5DBD2B210475E30035F596 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		ED5DBD13210473F80035F596 /* CopyFiles */ = {
+		ED5DBD26210475E30035F596 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		ED5DBD15210473F80035F596 /* LearningGit */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearningGit; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED5DBD18210473F80035F596 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		ED5DBD28210475E30035F596 /* LearningGit */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearningGit; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED5DBD2B210475E30035F596 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		ED5DBD12210473F80035F596 /* Frameworks */ = {
+		ED5DBD25210475E30035F596 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,26 +38,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ED5DBD0C210473F80035F596 = {
+		ED5DBD1F210475E30035F596 = {
 			isa = PBXGroup;
 			children = (
-				ED5DBD17210473F80035F596 /* LearningGit */,
-				ED5DBD16210473F80035F596 /* Products */,
+				ED5DBD2A210475E30035F596 /* LearningGit */,
+				ED5DBD29210475E30035F596 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		ED5DBD16210473F80035F596 /* Products */ = {
+		ED5DBD29210475E30035F596 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED5DBD15210473F80035F596 /* LearningGit */,
+				ED5DBD28210475E30035F596 /* LearningGit */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ED5DBD17210473F80035F596 /* LearningGit */ = {
+		ED5DBD2A210475E30035F596 /* LearningGit */ = {
 			isa = PBXGroup;
 			children = (
-				ED5DBD18210473F80035F596 /* main.cpp */,
+				ED5DBD2B210475E30035F596 /* main.cpp */,
 			);
 			path = LearningGit;
 			sourceTree = "<group>";
@@ -65,13 +65,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ED5DBD14210473F80035F596 /* LearningGit */ = {
+		ED5DBD27210475E30035F596 /* LearningGit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ED5DBD1C210473F80035F596 /* Build configuration list for PBXNativeTarget "LearningGit" */;
+			buildConfigurationList = ED5DBD2F210475E30035F596 /* Build configuration list for PBXNativeTarget "LearningGit" */;
 			buildPhases = (
-				ED5DBD11210473F80035F596 /* Sources */,
-				ED5DBD12210473F80035F596 /* Frameworks */,
-				ED5DBD13210473F80035F596 /* CopyFiles */,
+				ED5DBD24210475E30035F596 /* Sources */,
+				ED5DBD25210475E30035F596 /* Frameworks */,
+				ED5DBD26210475E30035F596 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -79,55 +79,55 @@
 			);
 			name = LearningGit;
 			productName = LearningGit;
-			productReference = ED5DBD15210473F80035F596 /* LearningGit */;
+			productReference = ED5DBD28210475E30035F596 /* LearningGit */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		ED5DBD0D210473F80035F596 /* Project object */ = {
+		ED5DBD20210475E30035F596 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Dustin Beck";
 				TargetAttributes = {
-					ED5DBD14210473F80035F596 = {
+					ED5DBD27210475E30035F596 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = H47Z36Q7TF;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = ED5DBD10210473F80035F596 /* Build configuration list for PBXProject "LearningGit" */;
+			buildConfigurationList = ED5DBD23210475E30035F596 /* Build configuration list for PBXProject "LearningGit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = ED5DBD0C210473F80035F596;
-			productRefGroup = ED5DBD16210473F80035F596 /* Products */;
+			mainGroup = ED5DBD1F210475E30035F596;
+			productRefGroup = ED5DBD29210475E30035F596 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ED5DBD14210473F80035F596 /* LearningGit */,
+				ED5DBD27210475E30035F596 /* LearningGit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		ED5DBD11210473F80035F596 /* Sources */ = {
+		ED5DBD24210475E30035F596 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED5DBD19210473F80035F596 /* main.cpp in Sources */,
+				ED5DBD2C210475E30035F596 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		ED5DBD1A210473F80035F596 /* Debug */ = {
+		ED5DBD2D210475E30035F596 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -174,7 +174,7 @@
 			};
 			name = Debug;
 		};
-		ED5DBD1B210473F80035F596 /* Release */ = {
+		ED5DBD2E210475E30035F596 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -214,7 +214,7 @@
 			};
 			name = Release;
 		};
-		ED5DBD1D210473F80035F596 /* Debug */ = {
+		ED5DBD30210475E30035F596 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = H47Z36Q7TF;
@@ -222,7 +222,7 @@
 			};
 			name = Debug;
 		};
-		ED5DBD1E210473F80035F596 /* Release */ = {
+		ED5DBD31210475E30035F596 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = H47Z36Q7TF;
@@ -233,24 +233,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ED5DBD10210473F80035F596 /* Build configuration list for PBXProject "LearningGit" */ = {
+		ED5DBD23210475E30035F596 /* Build configuration list for PBXProject "LearningGit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ED5DBD1A210473F80035F596 /* Debug */,
-				ED5DBD1B210473F80035F596 /* Release */,
+				ED5DBD2D210475E30035F596 /* Debug */,
+				ED5DBD2E210475E30035F596 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED5DBD1C210473F80035F596 /* Build configuration list for PBXNativeTarget "LearningGit" */ = {
+		ED5DBD2F210475E30035F596 /* Build configuration list for PBXNativeTarget "LearningGit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ED5DBD1D210473F80035F596 /* Debug */,
-				ED5DBD1E210473F80035F596 /* Release */,
+				ED5DBD30210475E30035F596 /* Debug */,
+				ED5DBD31210475E30035F596 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = ED5DBD0D210473F80035F596 /* Project object */;
+	rootObject = ED5DBD20210475E30035F596 /* Project object */;
 }

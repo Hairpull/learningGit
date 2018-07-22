@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ED5DBD14210473F80035F596"
+               BlueprintIdentifier = "ED5DBD27210475E30035F596"
                BuildableName = "LearningGit"
                BlueprintName = "LearningGit"
                ReferencedContainer = "container:LearningGit.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ED5DBD14210473F80035F596"
+            BlueprintIdentifier = "ED5DBD27210475E30035F596"
             BuildableName = "LearningGit"
             BlueprintName = "LearningGit"
             ReferencedContainer = "container:LearningGit.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ED5DBD14210473F80035F596"
+            BlueprintIdentifier = "ED5DBD27210475E30035F596"
             BuildableName = "LearningGit"
             BlueprintName = "LearningGit"
             ReferencedContainer = "container:LearningGit.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ED5DBD14210473F80035F596"
+            BlueprintIdentifier = "ED5DBD27210475E30035F596"
             BuildableName = "LearningGit"
             BlueprintName = "LearningGit"
             ReferencedContainer = "container:LearningGit.xcodeproj">
