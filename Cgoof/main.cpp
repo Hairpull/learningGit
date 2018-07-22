@@ -47,9 +47,6 @@ public:
 	int initiative = 0;
 			};
 
-class roll{
-	
-};
 
 
 class battle {
