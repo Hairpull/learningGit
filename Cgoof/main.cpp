@@ -47,6 +47,7 @@ public:
 	int initiative = 0;
 			};
 
+// Add a Roll function
 
 
 class battle {
