@@ -1,4 +1,5 @@
-// I followed along with Derek Banas' OOP lesson on YouTube and created a little battle simulator to study classes
+// I followed along with Derek Banas' OOP lesson on YouTube and created a little battle simulator to study classes.
+// Never intended to make this code public, so it's not commented. Primarily using this file to learn how Git works.
 // -DB
 
 #include <cstdlib>
@@ -39,7 +40,7 @@ public:
 		return rand() % this->blockMax;
 	}
 
-	private:
+private:
 	int attackMax;
 	int blockMax;
 	int strength = 50;
@@ -47,8 +48,37 @@ public:
 	int initiative = 0;
 			};
 
-// Add a Roll function
-
+// Die system
+/*
+class myDie {
+public:
+	int sides = 6;
+	
+	myDie(int sides){
+		this->sides = sides;
+		srand(time(0));
+	}
+	myDie(){
+		sides = 6;
+		srand(time(0));
+	}
+	
+	int roll(fighter roller){
+		string report = roller.name.c_str();
+		printf(report.c_str());
+		printf(" is rolling %i sided die...\n",sides);
+		int roll;
+		int min = 1;
+		int max = this->sides;
+		
+		
+		
+		roll = rand() % (max - min + 1) + min;
+		
+		return roll;
+	}
+};
+*/
 
 class battle {
 	
@@ -107,10 +137,10 @@ public:
 int main() {
 	// had to static cast the returned value of time to an unsigned int to avoid compiler warnings
 	srand(static_cast<unsigned int>(time(NULL)));
-	
+
 	fighter Terry("Terry", 75, 125, "Here I come puny boy!", "Let's go!");
 	fighter Alex ("Alex", 90, 100, "Watch out for me!", "Not today buddy!");
-
+	
 	battle::startFight(Terry,Alex);
 
 	return 0;
