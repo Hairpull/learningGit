@@ -14,6 +14,24 @@
 
 using namespace std;
 
+class item {
+public:
+	int defMod = 0;
+	int attMod = 0;
+	string itemName = "";
+	
+	item(string name, int aMod, int dMod){
+		this->itemName = name;
+		this->attMod = aMod;
+		this->defMod = dMod;
+		printf("%s appears on the battlefield! \n", itemName.c_str());
+	}
+	item(){
+		itemName = "item";
+		attMod = 0;
+		defMod = 0;
+	}
+};
 
 class fighter {
 public:
@@ -33,11 +51,25 @@ public:
 	string battleCry;
 	string readyCry;
 	int health = 100;
+	
+	// a Mod and dMod are places to store any item-related attack or defense mods
+	int aMod = 0;
+	int dMod = 0;
+	
 	int attack(){
 		return rand() % this->attackMax;
 	}
 	int block(){
 		return rand() % this->blockMax;
+	}
+	
+	string equip(item& gear){
+		
+		aMod = gear.attMod;
+		dMod = gear.defMod;
+		
+		printf("%s equipped \n", gear.itemName.c_str());
+		return "";
 	}
 
 private:
@@ -50,6 +82,7 @@ private:
 
 // Die system
 /*
+ 
 class myDie {
 public:
 	int sides = 6;
@@ -78,6 +111,7 @@ public:
 		return roll;
 	}
 };
+
 */
 
 class battle {
@@ -107,8 +141,10 @@ public:
 	
 	static string getAttackResult(fighter& fighter1, fighter& fighter2)
 	{
-		int fighter1AttackAmount = fighter1.attack();
-		int fighter2BlockAmount = fighter2.block();
+		
+		int fighter1AttackAmount = fighter1.attack() + fighter1.aMod;
+		int fighter2BlockAmount = fighter2.block() + fighter1.dMod;
+		
 		int damageToFighter2 = ceil(fighter1AttackAmount - fighter2BlockAmount);
 		damageToFighter2 = (damageToFighter2 <= 0) ? 0 : damageToFighter2;
 		fighter2.health = fighter2.health - damageToFighter2;
@@ -138,8 +174,13 @@ int main() {
 	// had to static cast the returned value of time to an unsigned int to avoid compiler warnings
 	srand(static_cast<unsigned int>(time(NULL)));
 
+	item Armor("Armor", 0, 10);
+	item Axe("Axe", 10, 0);
 	fighter Terry("Terry", 75, 125, "Here I come puny boy!", "Let's go!");
 	fighter Alex ("Alex", 90, 100, "Watch out for me!", "Not today buddy!");
+	
+	Terry.equip(Armor);
+	Alex.equip(Axe);
 	
 	battle::startFight(Terry,Alex);
 
