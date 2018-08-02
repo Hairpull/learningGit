@@ -1,5 +1,5 @@
 // I followed along with Derek Banas' OOP lesson on YouTube and created a little battle simulator to study classes.
-// Never intended to make this code public, so it's not commented. Primarily using this file to learn how Git works.
+// Never intended to make this code public, so it's not entirely commented. Primarily using this file to learn how Git works.
 // -DB
 
 #include <cstdlib>
@@ -119,22 +119,27 @@ class battle {
 public:
 	static void startFight(fighter& fighter1, fighter& fighter2)
 	{
-		printf("A fight has broken out between %s and %s!", fighter1.name.c_str(), fighter2.name.c_str());
+		printf("\nA fight has broken out between %s and %s!\n", fighter1.name.c_str(), fighter2.name.c_str());
 		cout << endl;
 		
 		
 		while(true)
 		{
+			// fighter 1 attacks fighter2
+			
 			if(battle::getAttackResult(fighter1, fighter2).compare("Game Over") == 0)
 					{
 						std::cout << "Game Over\n";
 				break;
 					}
+			
+			// fighter 2 attacks fighter1
+			
 			if(battle::getAttackResult(fighter2, fighter1).compare("Game Over") == 0)
-			{
+					{
 				std::cout << "Game Over\n";
-		break;
-			}
+				break;
+					}
 			
 		}
 	}
@@ -149,25 +154,50 @@ public:
 		damageToFighter2 = (damageToFighter2 <= 0) ? 0 : damageToFighter2;
 		fighter2.health = fighter2.health - damageToFighter2;
 		
+		// battle dialogue
+		battleDialogue(fighter1, fighter2);
+		// fighters attack each other
+		
 		printf("%s attacks %s and deals %d damage! \n", fighter1.name.c_str(), fighter2.name.c_str(), damageToFighter2);
 		cout << endl;
 		if (fighter2.health <= 0){
 			fighter2.health = 0;
 		}
-		printf("%s is down to %d healh",fighter2.name.c_str(), fighter2.health);
+		printf("%s is down to %d healh\n",fighter2.name.c_str(), fighter2.health);
 		cout << endl;
+		
 		
 		// slowdown the battle
 		// usleep(50000);
 		
 		if(fighter2.health <= 0)
 		{
-		printf("%s has died and %s is victorious!", fighter2.name.c_str(), fighter1.name.c_str());
+		printf("%s has died and %s is victorious!\n", fighter2.name.c_str(), fighter1.name.c_str());
 			cout << endl;
 		return "Game Over";
 		}
 		else return "Fight Again";
 	};
+	
+	static void battleDialogue(fighter& fighter1, fighter& fighter2){
+		int roll = rand() % 10 + 1;
+		// printf("Roll: %i\n",roll);
+		
+		if (roll == 1){
+			printf("%s : %s\n",fighter1.name.c_str(),fighter1.battleCry.c_str()); // fighter one shouts their battlecry
+			printf("%s : %s\n\n",fighter2.name.c_str(),fighter2.readyCry.c_str());  // fighter 2 responds with their readycry
+			}
+		if (roll == 10){
+			printf("%s : %s\n",fighter2.name.c_str(),fighter2.battleCry.c_str());
+			printf("%s : %s\n\n",fighter1.name.c_str(),fighter1.readyCry.c_str());
+			}
+		else{};
+		
+		
+		
+
+		
+		};
 };
 
 int main() {
