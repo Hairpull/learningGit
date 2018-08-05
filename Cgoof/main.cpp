@@ -34,6 +34,7 @@ public:
 };
 
 class fighter {
+	friend class battle;
 public:
 
 	fighter (string name, int attackMax, int blockMax, string battleCry = "Watch out!", string readyCry = "Oh boy!")
@@ -45,6 +46,10 @@ public:
 			this->blockMax = blockMax;
 			}
 	
+	void getStats(){
+		printf ("Name: %s\nAttack: %i\nBlock: %i\nHealth: %i\n\n",this->name.c_str(), this->attack(), this->block(), this->health);
+	}
+	public:
 	string name;
 	string shortDescription;
 	string longDescription;
@@ -52,12 +57,12 @@ public:
 	string readyCry;
 	int health = 100;
 	
-	// a Mod and dMod are places to store any item-related attack or defense mods
+	// aMod and dMod are variables for storing any item-related attack or defense mods
 	int aMod = 0;
 	int dMod = 0;
 	
 	int attack(){
-		return rand() % this->attackMax;
+		return rand() % this->attackMax +1;
 	}
 	int block(){
 		return rand() % this->blockMax;
@@ -158,7 +163,14 @@ public:
 		battleDialogue(fighter1, fighter2);
 		// fighters attack each other
 		
+		if (fighter2BlockAmount >= fighter1AttackAmount){
+			printf("%s blocks %s's attack! %s deals %d damage! \n", fighter2.name.c_str(), fighter1.name.c_str(), fighter1.name.c_str(), damageToFighter2);
+		}
+		else {
 		printf("%s attacks %s and deals %d damage! \n", fighter1.name.c_str(), fighter2.name.c_str(), damageToFighter2);
+		};
+		
+		
 		cout << endl;
 		if (fighter2.health <= 0){
 			fighter2.health = 0;
@@ -208,6 +220,8 @@ int main() {
 	item Axe("Axe", 10, 0);
 	fighter Terry("Terry", 75, 125, "Here I come puny boy!", "Let's go!");
 	fighter Alex ("Alex", 90, 100, "Watch out for me!", "Not today buddy!");
+	Alex.getStats();
+	Terry.getStats();
 	
 	Terry.equip(Armor);
 	Alex.equip(Axe);
