@@ -15,6 +15,7 @@
 using namespace std;
 
 class item {
+	friend class fighter;
 public:
 	int defMod = 0;
 	int attMod = 0;
@@ -45,6 +46,9 @@ public:
 			this->attackMax = attackMax;
 			this->blockMax = blockMax;
 			}
+	string getName(){
+		return name;
+	}
 	
 	void getStats(){
 		printf ("Name: %s\nAttack: %i\nBlock: %i\nHealth: %i\n\n",this->name.c_str(), this->attack(), this->block(), this->health);
@@ -70,10 +74,11 @@ public:
 	
 	string equip(item& gear){
 		
+
 		aMod = gear.attMod;
 		dMod = gear.defMod;
 		
-		printf("%s equipped \n", gear.itemName.c_str());
+		printf("%s equipped %s\n",  name.c_str(), gear.itemName.c_str());
 		return "";
 	}
 
